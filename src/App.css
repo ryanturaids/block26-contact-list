@@ -13,3 +13,12 @@ td {
 tr:nth-child(even) {
   background-color: rgb(237, 237, 237);
 }
+
+.clickableRow:hover {
+  background-color: rgb(186, 224, 186);
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}

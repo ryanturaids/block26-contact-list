@@ -50,8 +50,16 @@ export default function SelectedContact({
             <td>{contact.name}</td>
           </tr>
           <tr>
+            <td>Username</td>
+            <td>{contact.username}</td>
+          </tr>
+          <tr>
             <td>Email</td>
             <td>{contact.email}</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>{contact.phone}</td>
           </tr>
           <tr>
             <td>Website</td>
@@ -59,11 +67,20 @@ export default function SelectedContact({
           </tr>
           <tr>
             <td>Company</td>
-            <td>{contact.company.name}</td>
+            <td>
+              {contact.company.name} <br></br> {contact.company.bs} <br></br>
+              {`"${contact.company.catchPhrase}"`}
+            </td>
           </tr>
           <tr>
             <td>Address</td>
-            <td>{`${contact.address.street} ${contact.address.suite}, ${contact.address.city} ${contact.address.zipcode} (Lat: ${contact.address.geo.lat}, Long: ${contact.address.geo.lng})`}</td>
+            <td>
+              {contact.address.street}
+              <br></br> {contact.address.suite}
+              <br></br> {`${contact.address.city} ${contact.address.zipcode}`}
+              <br></br>
+              {`(Lat: ${contact.address.geo.lat}, Long: ${contact.address.geo.lng})`}
+            </td>
           </tr>
         </tbody>
       </table>
